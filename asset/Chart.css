@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Popin',sans-serif;
+}
+:root{
+    --menu-color: linear-gradient(72.47deg, #7367f0 22.16%, rgba(115, 103, 240, 0.7) 76.47%);
+    --menu-shadow: 0px 2px 6px 0px rgba(115,103,240,.48); 
+    --menu-hover-color: #e3e3e3;
+    --menu-icon-color: #5d596c;
+    --menu-textunselect-color:#5d596c;
+    --menu-incon-unselect: #5d596c;
+    --menu-textselect-color: #fff !important;
+    --menu-iconselect-color: #fff;
+    --td-color: #6e66ed;
+    --pagination-color: #7367f0;
+
+ }
+ 
+ body{
+     width: 100%;
+     background: #edeef3;
+     position: relative;
+     display: flex;
+ }
+ 
+ #menu{
+    position: fixed;
+    background-color:#fff;
+    width: 300px;
+    height: 100%;    
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+
+#menu .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#menu .logo img{ 
+    width: 150px;
+}
+#menu .item{
+    margin-top: 40px;
+}
+#menu .item ul li{
+    position: relative;
+    list-style-type: none;
+    transition: 0.3s ease;
+    border-radius: 5px;
+
+}
+
+#menu .item li i{
+    color: var(--menu-icon-color);
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+#menu .item li a{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: var(--menu-textunselect-color);
+    display: block;
+    padding: 15px 0;
+
+}
+#menu .item li a{
+    text-decoration: none;
+    color: var(--menu-textunselect-color);
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.logout-nav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(500%);
+}
+ 
+ #menu .item li:nth-child(5) {
+    background: var(--menu-color);
+    box-shadow: var(--menu-shadow);
+}
+
+#menu .item ul li:nth-child(5)  i,#menu .item ul li:nth-child(5)  a {
+    color: var(--menu-textselect-color);
+  }
+ 
+ 
+ #menu .item li:nth-child(5):hover{
+     background: var(--menu-color);
+     cursor: none;
+ }
+ 
+ #menu .item li:hover{
+     background: var(--menu-hover-color);
+     cursor: pointer;
+ }
+
+ #menu .item .logout-nav:hover{
+    background: red;
+    color: white;
+}
+#menu .item .logout-nav:hover a,#menu .item .logout-nav:hover i {
+    color: white;
+}
+/* Header */
+#interface{
+    width: 1500px;
+    margin-left: 300px;
+    position: relative;
+    background-color:#edeef3;
+}
+
+#interface .nav{
+    display: flex ;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #003049;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+#interface .nav .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #003049;
+    border-radius: 10px;
+
+}
+
+#interface .nav .search i{
+    margin-right: 14px;
+}
+
+#interface .nav .search input{
+    border: none;
+    outline: none;
+    font: 14px  ;
+}
+
+#interface .nav .profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.n1{
+    margin-top: 10px;
+}
+#interface .nav .profile i{
+    margin-right: 20px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#interface .nav .profile img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.i-name{
+    color: black;
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+/* =============Chart========= */
+.chart-panel {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px  0px;
+}
+
+.chart-panel .box-chart{
+    /* width: 555px;
+    height: 365px; */
+    padding: 0 20px;
+    background-color: #ffffff;
+    margin-left: 30px;
+    margin-top: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-height: 300px;
+    min-width: 500px;
+}
+
+.box-chart .box-chart-header{
+    border-bottom: #ccc solid 0.5px;
+    padding: 20px ;
+}
+
+/* .box-chart1 .box-chart-header{
+    border-bottom: #ccc solid 0.5px;
+    padding: 20px ;
+}
+.chart-panel .box-chart1{
+    min-height: 300px;
+    min-width: 500px;
+    margin-left: 30px;
+    margin-top: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #ffffff;
+
+
+} */
+

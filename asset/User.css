@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Popin',sans-serif;
+}
+:root{
+    --menu-color: linear-gradient(72.47deg, #7367f0 22.16%, rgba(115, 103, 240, 0.7) 76.47%);
+    --menu-shadow: 0px 2px 6px 0px rgba(115,103,240,.48); 
+    --menu-hover-color: #e3e3e3;
+    --menu-icon-color: #5d596c;
+    --menu-textunselect-color:#5d596c;
+    --menu-incon-unselect: #5d596c;
+    --menu-textselect-color: #fff !important;
+    --menu-iconselect-color: #fff;
+    --td-color: #6e66ed;
+    --pagination-color: #7367f0;
+
+
+ 
+ }
+ 
+ body{
+     width: 100%;
+     background: #edeef3;
+     position: relative;
+     display: flex;
+ }
+ 
+ #menu{
+    position: fixed;
+    background-color:#fff;
+    width: 300px;
+    height: 100%;    
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+
+#menu .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#menu .logo img{ 
+    width: 150px;
+}
+#menu .item{
+    margin-top: 40px;
+}
+#menu .item ul li{
+    position: relative;
+    list-style-type: none;
+    transition: 0.3s ease;
+    border-radius: 5px;
+
+}
+
+#menu .item li i{
+    color: var(--menu-icon-color);
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+#menu .item li a{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: var(--menu-textunselect-color);
+    display: block;
+    padding: 15px 0;
+
+}
+#menu .item li a{
+    text-decoration: none;
+    color: var(--menu-textunselect-color);
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.logout-nav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(500%);
+}
+ 
+ #menu .item li:nth-child(2) {
+    background: var(--menu-color);
+    box-shadow: var(--menu-shadow);
+}
+
+#menu .item ul li:nth-child(2)  i,#menu .item ul li:nth-child(2)  a {
+    color: var(--menu-textselect-color);
+  }
+ 
+ 
+ #menu .item li:nth-child(2):hover{
+     background: var(--menu-color);
+     cursor: none;
+ }
+ 
+ #menu .item li:hover{
+     background: var(--menu-hover-color);
+     cursor: pointer;
+ }
+
+ #menu .item .logout-nav:hover{
+    background: red;
+    color: white;
+}
+#menu .item .logout-nav:hover a,#menu .item .logout-nav:hover i {
+    color: white;
+}
+
+/* Header */
+#interface{
+    width: 1500px;
+    margin-left: 300px;
+    position: relative;
+    background-color:#edeef3;
+}
+
+#interface .nav{
+    display: flex ;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #003049;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+#interface .nav .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #003049;
+    border-radius: 10px;
+
+}
+
+#interface .nav .search i{
+    margin-right: 14px;
+}
+
+#interface .nav .search input{
+    border: none;
+    outline: none; 
+    font: 14px  ;
+}
+
+#interface .nav .profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.n1{
+    margin-top: 10px;
+}
+#interface .nav .profile i{
+    margin-right: 20px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#interface .nav .profile img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.i-name{
+    color: black;
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.board{
+    width: 95.3%;
+    margin: 30px 0 30px 30px;
+    overflow: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+
+.board .board-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.board .board-header h3{
+    padding: 20px;
+}
+
+/* ====Sort List==== */
+
+#sort_list{
+    padding: 5px 10px;
+    margin-right: 20px;
+    
+}
+
+.board img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.board h5{
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+.board p{
+    font-weight: 400;
+    font-size: 13px;
+    color: #787d8d;
+}
+
+.board .people{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px  solid #eef0f3;
+}
+
+thead td {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 700;
+    background:var(--td-color);
+    text-align: start;
+    padding: 15px;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody tr td{
+    padding: 10px 15px;
+}
+
+.cus-bdate p{
+    justify-content: center;
+    text-align: center;
+}
+
+.cus-phone p{
+    text-align: center;
+    justify-items: center;
+}
+
+.bill p{
+    padding-left: 15px;
+    text-align: center;
+    justify-items: center;
+}
+
+.edit a{
+    text-decoration: none;
+    font-size: 14px;
+    color:#ffffff;
+    font-weight: 600;
+    background-color: #554cd1;
+    padding: 5px 8px;
+    border-radius: 5px;
+
+}
+
+.delete a{
+    text-decoration: none;
+    font-size: 14px;
+    background-color:red;
+    color: #fff;;
+    font-weight: 600;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+
+
+/* =====Pagination======= */
+.box-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 25px 0 10px 0 ;
+}
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: var(--pagination-color)  ;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+
+
+/*================= MODAL CSS=========== */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0,0, 0.3);
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    display: none;
+}
+.modal.open{
+    display: flex;
+}
+.modal .modal-container{
+    background-color: #fff;
+    width: 600px;
+    max-width: calc(100%-32px);
+    min-height: 200px;
+    position: relative;
+    border-radius: 10px;
+    animation: modalFaceIn ease 0.4s;
+}
+header.modal-header {
+    background-color: #554cd1;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+.modal-close{
+    position: absolute;
+    right: 0;
+    color:white;
+    padding: 12px;
+    cursor: pointer;
+}
+.modal-close:hover{
+    color: #fff;
+    background-color: red;
+}
+.modal-body{
+    padding: 16px;
+}
+.modal-label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.modal-input{
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.modal-body input{
+    width: 100%;
+}
+
+.cus-id-edit{
+    text-align: center;
+    justify-content: center;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.btn-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.img-input{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    right: 0;
+}
+
+
+.save-info-cus-btn{
+    padding: 15px 10px;
+    background-color: #7671c0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.save-info-cus-btn:hover{
+    background-color: #554cd1;
+}
+
+/*================= MODAL Delete=========== */
+.modal-delete {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0,0, 0.3);
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    display: none;
+}
+.modal-delete.open{
+    display: flex;
+}
+.modal-delete  .modal-delete-container{
+    background-color: #fff;
+    width: 500px;
+    max-width: calc(100%-32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFaceIn ease 0.4s;
+}
+header.modal-delete-header {
+    background-color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 0.5px solid #ccc;
+}
+
+
+.head-delete-arlert {
+    padding: 20px;
+}
+
+.body-alert{
+    padding: 20px;
+    background-color: #F8D7DA;
+    color: #721C24;
+    margin: 16px;
+}
+
+.btn-option{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.delete-account{
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background-color: #d23434;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cancel-account{
+    margin: 10px 0px;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.delete-account:hover{
+    background-color: #cf0808;
+
+}
+
+.cancel-account:hover{
+    background-color: #00a645;
+
+}
+.modal-delete-body{
+    /* padding: 16px; */
+}
+
+@keyframes modalFaceIn{
+
+    from{
+        opacity: 0;
+        transform: translateY(-200px)
+    }  
+
+    to{
+        opacity: 1;
+        transform: translateY(0)
+
+    }
+}

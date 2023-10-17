@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/Chart.css">
+    <link rel="stylesheet" href="./icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="./img/demologo.png" alt="">
+        </div>
+
+        <div class="item">
+            <ul>
+                <li><a href="./index.html"><i class="ti-pie-chart"></i>Dashboard</a></li>
+                <li><a href="./User.html"><i class="ti-user"></i>Users Account</a></li>
+                <li><a href="./Product.html"><i class="ti-dropbox-alt"></i>Products</a></li>
+                <li><a href="./Order.html"><i class="ti-shopping-cart-full"></i>Orders</a></li>
+                <li><a href="./Chart.html"><i class="ti-pulse"></i>Charts</a></li>
+                <li class="logout-nav"><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="nav">
+            <div class="n1">
+                <div class="search">
+                    <i class="ti-search"></i>
+                    <input type="text" name="" placeholder="Search" id="">
+                </div>
+            </div>
+
+            <div class="profile">
+                <i class="ti-bell"></i>
+                <img src="./img/user.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Chart Panel -->
+        
+        <div class="chart-panel">
+
+
+            <div class="box-chart">
+                <div class="box-chart-header">
+                    <h3>Số lượng bán ra</h3>
+                </div>
+                <div class="bar-chart">
+                    <canvas id="myChart1"></canvas>
+                </div>
+            </div>
+
+            <div class="box-chart">
+                <div class="box-chart-header">
+                    <h3>Doanh thu</h3>
+                </div>
+                <div class="line-chart">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+
+            <div class="box-chart">
+                <div class="box-chart-header">
+                    <h3>Xuất xứ</h3>
+                </div>
+                <div class="pie-char">
+                    <canvas id="myChart3" ></canvas>
+                </div>
+            </div>
+
+            <div class="box-chart">
+                <div class="box-chart-header">
+                    <h3>Khách hàng</h3>
+                </div>
+                <div class="doughnut-chart">
+                    <canvas id="myChart4"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- JAVA SCRIPT -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+        <script src="./JS/chart.js"></script>
+</body>
+</html>

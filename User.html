@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/User.css">
+    <link rel="stylesheet" href="./icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./asset/toast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="./img/demologo.png" alt="">
+        </div>
+
+        <div class="item">
+            <ul>
+                <li><a href="./index.html"><i class="ti-pie-chart"></i>Dashboard</a></li>
+                <li><a href="./User.html"><i class="ti-user"></i>Users Account</a></li>
+                <li><a href="./Product.html"><i class="ti-dropbox-alt"></i>Products</a></li>
+                <li><a href="./Order.html"><i class="ti-shopping-cart-full"></i>Orders</a></li>
+                <li><a href="./Chart.html"><i class="ti-pulse"></i>Charts</a></li>
+                <li class="logout-nav"><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="nav">
+            <div class="n1">
+                <div class="search">
+                    <i class="ti-search"></i>
+                    <input type="text" name="" placeholder="Search" id="">
+                </div>
+            </div>
+
+            <div class="profile">
+                <i class="ti-bell"></i>
+                <img src="./img/user.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="board-header">
+                <h3>Customer Account List</h3>
+                <div class="sort-bar">
+                    <select id="sort_list">
+                        <option class="sort_item" value="default_sort">Default sorting</option>
+                        <option class="sort_item" value="popular_sort">Sort by Name</option>
+                        <option class="sort_item" value="average_sort">Sort by Bill</option>
+                    </select>
+                </div>
+            </div>
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Users Name</td>
+                        <td>Birth date</td>
+                        <td>Location</td>
+                        <td>Phone Number </td>
+                        <td>Bill</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+
+                    <tr>
+                        <td id="customer-id">1</td>
+
+                        <td class="people">
+                            <img src="./img/customer.png" alt="">
+                            <div class="people-des">
+                                <h5>Thiện Mỹ</h5>
+                                <p>thienmy230703@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="cus-bdate">
+                            <p>23/07/2003</p>
+                        </td>
+
+                        <td class="people-des">
+                            <p>12 Nguyên Thị Minh Khai, Phường 1, TP Cao Lãnh, Đồng Tháp</p>
+                        </td>
+
+                        <td class="cus-phone"><p>0923290954</p></td>
+
+                        <td class="cus-bill">
+                            <p>199$</p>
+                        </td>
+
+                        <td class="edit js-edit-product"><a href="#">Edit</a></td>
+                        <td class="delete js-delete-acc"><a href="#">Delete</a></td>
+                    </tr>
+
+                    <tr>
+                        <td id="customer-id">1</td>
+
+                        <td class="people">
+                            <img src="./img/customer.png" alt="">
+                            <div class="people-des">
+                                <h5>Thiện Mỹ</h5>
+                                <p>thienmy230703@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="cus-bdate">
+                            <p>23/07/2003</p>
+                        </td>
+
+                        <td class="people-des">
+                            <p>12 Nguyên Thị Minh Khai, Phường 1, TP Cao Lãnh, Đồng Tháp</p>
+                        </td>
+
+                        <td class="cus-phone"><p>0923290954</p></td>
+
+                        <td class="cus-bill">
+                            <p>199$</p>
+                        </td>
+
+                        <td class="edit js-edit-product"><a href="#">Edit</a></td>
+                        <td class="delete js-delete-acc"><a href="#">Delete</a></td>
+                    </tr>
+
+                    <tr>
+                        <td id="customer-id">1</td>
+
+                        <td class="people">
+                            <img src="./img/customer.png" alt="">
+                            <div class="people-des">
+                                <h5>Thiện Mỹ</h5>
+                                <p>thienmy230703@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="cus-bdate">
+                            <p>23/07/2003</p>
+                        </td>
+
+                        <td class="people-des">
+                            <p>12 Nguyên Thị Minh Khai, Phường 1, TP Cao Lãnh, Đồng Tháp</p>
+                        </td>
+
+                        <td class="cus-phone"><p>0923290954</p></td>
+
+                        <td class="cus-bill">
+                            <p>199$</p>
+                        </td>
+
+                        <td class="edit js-edit-product"><a href="#">Edit</a></td>
+                        <td class="delete js-delete-acc"><a href="#">Delete</a></td>
+                    </tr>
+            </table>
+            
+            <div class="box-pagination">
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#" >2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+        </div>
+        <!--Begin Modal-Edit -->
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <!--Begin Close-button -->
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+                <!--End Close-button -->
+                    <header class="modal-header">
+                        <i class="ti-user" style="padding: 16px"></i>
+                        Edit Customer Account
+                    </header>
+                    <div class="modal-body">
+                        <div class="name-input">
+                            <h3 class="cus-id-edit">Edit ID: 1</h3>
+                            <label for="name-cus" class="modal-label">Customer Name:</label>
+                            <input type="text" name="" id="name" class="modal-input" required>
+                        </div>
+
+                        <div class="img-input">
+                            <label for="img-product"class="modal-label">Change image Customer:</label>
+                            <input type="file">
+                        </div>
+
+                         <div class="brday-input">
+                            <label for="cus-birtdate"class="modal-label" >Birhdate:</label>
+                            <input type="date" id="price" class="modal-input" placeholder="dd/mm/yyyy" required>
+                        </div>
+
+                         <div class="locate-input">
+                            <label for="cus-locate"class="modal-label">Location</label>
+                            <input type="text"  class="modal-input" required>
+                        </div>
+                        
+                        <div class="phone-input">
+                            <label for="cus-phone"class="modal-label">Phone Number:</label>
+                            <input type="text" id="origin" class="modal-input" required>
+                        </div>
+
+                        <div class="email-input">
+                            <label for="cus-email"class="modal-label">E-mail:</label>
+                            <input type="email" id="origin" class="modal-input" required>
+                        </div>
+
+                        <div class="bill-input">
+                            <label for="cus-bill"class="modal-label">Bill:</label>
+                            <input type="text" id="origin" class="modal-input" required>
+                        </div>
+                        
+                        <div class="btn-div">
+                            <button onclick="showSuccessToast(); "class="save-info-cus-btn js-modal-savechange">
+                            <i class="ti-save"></i>
+                                Save change
+                            </button>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <!--End Modal-Edit -->
+
+
+
+        <!--Begin Modal-Delete-->
+        <div class="modal-delete js-modal-delete">
+            <div class="modal-delete-container js-modal-delete-container">               
+                <!--End Close-button -->
+                    <header class="modal-delete-header">
+                        <p class="head-delete-arlert">Account Confirmation</p>
+                    </header>
+                    <div class="modal-delete-body">
+                        
+                        <div class="body-alert">
+                            <p>Are you sure you want to delete this account?</p>
+                        </div>
+                        <hr>
+
+                        <div class="btn-option">
+                            <button class="cancel-account js-modal-delete-close">Cancel</button>
+                            <button onclick="showErrorToast();" class="delete-account js-modal-deleted">Delete</button>
+                        </div>
+                        
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <!--End Modal-Delete -->
+
+            <!-- JAVA SCRIPT -->
+           <script src="./JS/user.js"></script>
+
+            <!-- Toas message -->
+
+           <script src="./JS/toast.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+            <div id="toast"></div>
+
+            <script>
+            function showSuccessToast() {
+                toast({
+                title: "Edit successful!",
+                message: "Chỉnh sửa thông tin thành công.",
+                type: "success",
+                duration: 5000
+                });
+            }
+
+            function showErrorToast() {
+                toast({
+                title: "Deleted!",
+                message: "Bạn vừa xóa một tài khoản người dùng.",
+                type: "error",
+                duration: 5000
+                });
+            }
+            </script>
+</body>
+</html>

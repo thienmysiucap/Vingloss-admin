@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/Order.css">
+    <link rel="stylesheet" href="./icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./asset/toast.css">
+    <script src="./JS/delivery.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="./img/demologo.png" alt="">
+        </div>
+
+        <div class="item">
+            <ul>
+                <li><a href="./index.html"><i class="ti-pie-chart"></i>Dashboard</a></li>
+                <li><a href="./User.html"><i class="ti-user"></i>Users Account</a></li>
+                <li><a href="./Product.html"><i class="ti-dropbox-alt"></i>Products</a></li>
+                <li><a href="./Order.html"><i class="ti-shopping-cart-full"></i>Orders</a></li>
+                <li><a href="./Chart.html"><i class="ti-pulse"></i>Charts</a></li>
+                <li class="logout-nav"><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="nav">
+            <div class="n1">
+                <div class="search">
+                    <i class="ti-search"></i>
+                    <input type="text" name="" placeholder="Search" id="">
+                </div>
+            </div>
+
+            <div class="profile">
+                <i class="ti-bell"></i>
+                <img src="./img/user.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="fav-order-panel">
+            <div class="fav-order-header">
+                <h3>Order Status</h3>
+            </div>
+            <div class="fav-order-body">
+
+                <div class="progress-box">
+                    <div class="circular-progress-1">
+                        <span class="progress-value-1">0%</span>
+                    </div>
+
+                    <span class="text">Pending</span>
+                </div>
+
+                <div class="progress-box">
+                    <div class="circular-progress-2">
+                        <span class="progress-value-2">0%</span>
+                    </div>
+
+                    <span class="text">Delivered</span>
+                </div>
+
+                <div class="progress-box">
+                    <div class="circular-progress-3">
+                        <span class="progress-value-3">0%</span>
+                    </div>
+
+                    <span class="text">In progress of delivery</span>
+                </div>
+
+                <div class="progress-box">
+                    <div class="circular-progress-4">
+                        <span class="progress-value-4">0%</span>
+                    </div>
+
+                    <span class="text">Cancelled</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Table Pending -->
+
+        <div class="board">
+            <div class="board-header">
+                <h3>Pending Order List</h3>
+
+                <div class="sort-bar">
+                    <select id="sort_list">
+                        <option class="sort_item" value="default_sort">Default sorting</option>
+                        <option class="sort_item" value="popular_sort">Sort by Customer Name</option>
+                        <option class="sort_item" value="average_sort">Sort by Price</option>
+                        <option class="sort_item" value="average_sort">Sort by Location</option>
+                        <option class="sort_item" value="average_sort">Delivery Time</option>
+                    </select>
+                </div>
+
+            </div>
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Order ID</td>
+                        <td>Order Name</td>
+                        <td>Customer Name</td>
+                        <td>Location</td>
+                        <td>Orders Time</td>
+                        <td>Price</td>
+                        <td>Approve Orders</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="order-id">
+                           <p>1</p>
+                        </td>
+
+                        <td class="order-name">
+                            <p>Collection Red Wines x1</p>
+                        </td>
+
+                        <td class="order-cusname">
+                            <p>Lê Hoàng Thiện Mỹ</p>
+                        </td>
+                            
+                        <td class="location">
+                            <p>Đồng Tháp</p>
+                        </td>
+
+                        <td class="order-time">
+                            <p>10:05 29/09/2023</p>
+                        </td>
+
+                        <td class="order-price">
+                            <p>199$</p>
+                        </td>
+
+                        <td>
+                            <button onclick="showSuccessToast();" class="active-pending"><i class="ti-check"></i></button>
+                            <button class="delete-pending js-delete-order"><i class="ti-close"></i></button>
+
+                        </td>
+                    </tr>
+                </tbody>
+
+
+                
+                   
+                
+            </table>
+            <div class="box-pagination">
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#" >2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Table Order -->
+
+        <div class="board">
+            <div class="board-header">
+                <h3>Order List</h3>
+
+                <div class="sort-bar">
+                    <select id="sort_list">
+                        <option class="sort_item" value="default_sort">Default sorting</option>
+                        <option class="sort_item" value="popular_sort">Sort by Customer Name</option>
+                        <option class="sort_item" value="average_sort">Sort by Order Status</option>
+                        <option class="sort_item" value="average_sort">Sort by Price</option>
+                        <option class="sort_item" value="average_sort">Sort by Location</option>
+                        <option class="sort_item" value="average_sort">Delivery Time</option>
+                    </select>
+                </div>
+
+            </div>
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Order ID</td>
+                        <td>Order Name</td>
+                        <td>Customer Name</td>
+                        <td>Location</td>
+                        <td>Order Status</td>
+                        <td>Delivered Time</td>
+                        <td>Price</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="order-id">
+                           <p>1</p>
+                        </td>
+
+                        <td class="order-name">
+                            <p>Collection Red Wines x1</p>
+                        </td>
+
+                        <td class="order-cusname">
+                            <p>Lê Hoàng Thiện Mỹ</p>
+                        </td>
+                            
+                        <td class="location">
+                            <p>Đồng Tháp</p>
+                        </td>
+
+                        <td class="order-status js-add-delivery" >
+                            <p class="delivered">Delivered</p>
+                        </td>
+                        <td class="order-time">
+                            <p>10:05 29/09/2023</p>
+                        </td>
+
+                        <td class="order-price">
+                            <p>199$</p>
+                        </td>
+                    </tr>
+                    
+                   
+                </tbody>
+                   
+                <tbody>
+                    <tr>
+                        <td class="order-id">
+                           <p>2</p>
+                        </td>
+
+                     <td class="order-name">
+                            <p>Collection Blue Wines x1</p>
+                        </td>
+
+                        <td class="order-cusname">
+                            <p>Nguyễn Thành Danh</p>
+                        </td>
+                            
+                        <td class="location">
+                            <p>Đồng Tháp</p>
+                        </td>
+
+                        <td class="order-status js-add-delivery" >
+                            <p class="pending">Pending</p>
+                        </td>
+                        <td class="order-time">
+                            <p>10:05 29/09/2023</p>
+                        </td>
+
+                        <td class="order-price">
+                            <p>229$</p>
+                        </td>
+                    </tr>
+                    
+                   
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td class="order-id">
+                           <p>3</p>
+                        </td>
+
+                     <td class="order-name">
+                            <p>Collection Blue Wines x1</p>
+                        </td>
+
+                        <td class="order-cusname">
+                            <p>Nguyễn Thành Danh</p>
+                        </td>
+                            
+                        <td class="location">
+                            <p>Đồng Tháp</p>
+                        </td>
+
+                        <td class="order-status js-add-delivery" >
+                            <p class="cancel ">Cancelled</p>
+                        </td>
+                        <td class="order-time">
+                            <p>10:05 29/09/2023</p>
+                        </td>
+
+                        <td class="order-price">
+                            <p>229$</p>
+                        </td>
+                    </tr>
+                    
+                   
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td class="order-id">
+                           <p>3</p>
+                        </td>
+
+                     <td class="order-name">
+                            <p>Collection Blue Wines x1</p>
+                        </td>
+
+                        <td class="order-cusname">
+                            <p>Nguyễn Thành Danh</p>
+                        </td>
+                            
+                        <td class="location">
+                            <p>Đồng Tháp</p>
+                        </td>
+
+                        <td class="order-status js-add-delivery" >
+                            <p class="in-transport">In transport</p>
+                        </td>
+                        <td class="order-time">
+                            <p>10:05 29/09/2023</p>
+                        </td>
+
+                        <td class="order-price">
+                            <p>229$</p>
+                        </td>
+                    </tr>
+                    
+                   
+                </tbody>
+            </table>
+
+        <!--End Table Order -->
+
+            <div class="box-pagination">
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#" >2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Begin Modal-Delevery -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <!--Begin Close-button -->
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+           <!--End Close-button -->
+            <header class="modal-header">
+                <i class="ti-truck" style="padding: 16px"></i>
+                Tiến trình giao hàng
+            </header>
+            <div class="modal-body">
+                <div class="steps">
+                    <div class="box-status">
+                        <span class="circle active">
+                            <img class="delivery-icon" src="./icon_img/order-delivery.png" alt="">
+                        </span>
+                        <p class="status-text active-text">Chờ xác nhận đơn hàng</p>
+                    </div>
+
+                    <div class="box-status">
+                        <span class="circle">
+                            <img class="delivery-icon" src="./icon_img/tracking.png" alt="">
+                        </span>
+                        <p class="status-text">Đang vận chuyển</p>
+                    </div>
+
+                    <div class="box-status">
+                        <span class="circle">
+                            <img class="delivery-icon" src="./icon_img/Thien mywine.png" alt="">
+                        </span>
+                        <p class="status-text">Giao hàng thành công</p>
+                    </div>
+
+                    <div class="progress-bar">
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="prev" disabled >Prev</button>
+                    <button id="next">Next</button>
+                </div>
+            </div>
+
+        </div>
+            
+    </div>
+    <!--End Modal-Delicverty -->
+
+
+
+
+    <!--Begin Modal-Delete-->
+    <div class="modal-delete js-modal-delete">
+        <div class="modal-delete-container js-modal-delete-container">               
+            <!--End Close-button -->
+                <header class="modal-delete-header">
+                    <p class="head-delete-arlert">Order Confirmation</p>
+                </header>
+                <div class="modal-delete-body">
+                    
+                    <div class="body-alert">
+                        <p>Are you sure you want to delete this Order</p>
+                    </div>
+                    <hr>
+
+                    <div class="btn-option">
+                        <button class="cancel-account js-modal-delete-close">Cancel</button>
+                        <button onclick="showErrorToast();" class="delete-account js-modal-deleted">Delete</button>
+                    </div>
+                    
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        <!--End Modal-Delete -->
+
+
+
+
+        <script src="./JS/orders.js"></script>
+
+        <!-- Toas message -->
+        <script src="./JS/toast.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <div id="toast"></div>
+
+
+        <script>
+        function showSuccessToast() {
+            toast({
+            title: "Approved successful!",
+            message: "Đã duyệt đơn hàng.",
+            type: "success",
+            duration: 5000
+            });
+        }
+
+        function showErrorToast() {
+            toast({
+            title: "Deleted!",
+            message: "Bạn vừa xóa một đơn hàng.",
+            type: "error",
+            duration: 5000
+            });
+        }
+        </script>
+    
+</body>
+</html>

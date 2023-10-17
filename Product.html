@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/Product.css">
+    <link rel="stylesheet" href="./icon/themify-icons/themify-icons.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./asset/toast.css">
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="./img/demologo.png" alt="">
+        </div>
+
+        <div class="item">
+            <ul>
+                <li><a href="./index.html"><i class="ti-pie-chart"></i>Dashboard</a></li>
+                <li><a href="./User.html"><i class="ti-user"></i>Users Account</a></li>
+                <li><a href="./Product.html"><i class="ti-dropbox-alt"></i>Products</a></li>
+                <li><a href="./Order.html"><i class="ti-shopping-cart-full"></i>Orders</a></li>
+                <li><a href="./Chart.html"><i class="ti-pulse"></i>Charts</a></li>
+                <li class="logout-nav"><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+
+
+            </ul>
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="nav">
+            <div class="n1">
+                <div class="search">
+                    <i class="ti-search"></i>
+                    <input type="text" name="" placeholder="Search" id="">
+                </div>
+            </div>
+
+            <div class="profile">
+                <i class="ti-bell"></i>
+                <img src="./img/user.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="board-header">
+                <h3>Product List</h3>
+
+                <div class="sort-bar">
+                    <select id="sort_list">
+                        <option class="sort_item" value="default_sort">Default sorting</option>
+                        <option class="sort_item" value="popular_sort">Sort by Products Name</option>
+                        <option class="sort_item" value="average_sort">Sort by Quantity</option>
+                        <option class="sort_item" value="average_sort">Sort by Price</option>
+                        <option class="sort_item" value="average_sort">Sort by Origin</option>
+
+
+                    </select>
+                </div>
+            </div>
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Products Name</td>
+                        <td>Price</td>
+                        <td>Quantity </td>
+                        <td>Origin</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="product-id">1</td>
+                        <td class="product">
+                            <img src="./img/image-product-05-min-300x300.jpg" alt="">
+                            <div class="product-des">
+                                <h5>Collection Red Wines</h5>
+                            </div>
+                        </td>
+
+                        <td class="product-price">
+                            <h5>399$</h5>
+                            <p>499$</p>
+                        </td>
+
+                        <td class="quantity"><p>99</p></td>
+
+                        <td class="origin">
+                            <p>Pháp</p>
+                        </td>
+
+                        <td class="edit js-add-edit-product"><a href="#">Edit</a></td>
+                        <td class="delete js-delete-acc"><a href="#">Delete</a></td>
+                    </tr>
+                    
+                   
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td class="product-id">1</td>
+                        <td class="product">
+                            <img src="./img/image-product-05-min-300x300.jpg" alt="">
+                            <div class="product-des">
+                                <h5>Collection Red Wines</h5>
+                            </div>
+                        </td>
+
+                        <td class="product-price">
+                            <h5>399$</h5>
+                            <p>499$</p>
+                        </td>
+
+                        <td class="quantity"><p>99</p></td>
+
+                        <td class="origin">
+                            <p>Pháp</p>
+                        </td>
+
+                        <td class="edit js-add-edit-product"><a href="#">Edit</a></td>
+                        <td class="delete js-delete-acc"><a href="#">Delete</a></td>
+                    </tr>
+                    
+                   
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td class="product-id">1</td>
+                        <td class="product">
+                            <img src="./img/image-product-05-min-300x300.jpg" alt="">
+                            <div class="product-des">
+                                <h5>Collection Red Wines</h5>
+                            </div>
+                        </td>
+
+                        <td class="product-price">
+                            <h5>399$</h5>
+                            <p>499$</p>
+                        </td>
+
+                        <td class="quantity"><p>99</p></td>
+
+                        <td class="origin">
+                            <p>Pháp</p>
+                        </td>
+
+                        <td class="edit js-add-edit-product"><a href="#">Edit</a></td>
+                        <td class="delete js-delete-acc"><a href="#">Delete</a></td>
+                    </tr>
+                    
+                   
+                </tbody>
+            </table>
+
+             <!-- ADD product button -->
+             <div class="btn_add">
+                <button class="add-poduct-btn js-add-product"><i class="ti-plus"></i> Thêm sản phẩm</button>
+             </div>
+             <!-- ADD product button -->
+
+            <div class="box-pagination">
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#" >2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+            
+        </div>
+
+         
+
+    </section>
+    <!--Begin Modal-add -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <!--Begin Close-button -->
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+           <!--End Close-button -->
+            <header class="modal-header">
+                <i class="ti-bag" style="padding: 16px"></i>
+                Add Products
+            </header>
+            <div class="modal-body">
+                <div class="name-input">
+                    <label for="product-name" class="modal-label">Product Name:</label>
+                    <input type="text" name="" id="name" class="modal-input" required>
+                </div>
+
+                <div class="price-quantity-div">
+
+                    <div class="price-input">
+                        <label for="product-price "class="modal-label" >Price:</label>
+                        <input type="text" id="price" class="modal-input" placeholder="100$" required>
+                    </div>
+
+                    <div class="quantity-input">
+                        <label for="product-quantity"class="modal-label">Quantity</label>
+                        <input type="number" min="0" placeholder="01" id="quantity" class="modal-input" required>
+                    </div>
+                </div>
+                <div class="origin-input">
+                    <label for="product-origin"class="modal-label">Origins</label>
+                    <input type="text" id="origin" class="modal-input" required>
+                </div>
+
+                <div class="img-input">
+                    <label for="img-product"class="modal-label">Choose Product Image:</label>
+                    <input type="file">
+                </div>
+                
+                <div class="btn-div">
+
+                    <button class="clear-info-product-btn" >
+                        <i class="ti-brush"></i>
+                            Clear 
+                        </button>
+
+                    <button onclick="showSuccessToast();" class="add-info-product-btn js-modal-saveadd">
+                    <i class="ti-check"></i>
+                        Add Product
+                    </button>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <!--End Modal-add -->
+
+    <!--Begin Modal-Edit -->
+    <div class="modal-edit js-modal-edit">
+        <div class="modal-edit-container js-modal-edit-container">
+            <!--Begin Close-button -->
+            <div class="modal-edit-close js-modal-edit-close">
+                <i class="ti-close"></i>
+            </div>
+           <!--End Close-button -->
+            <header class="modal-edit-header">
+                <i class="ti-marker" style="padding: 16px"></i>
+                Edit Infomation Product
+            </header>
+            <div class="modal-edit-body">
+                <div class="name-input">
+                    <label for="product-name" class="modal-label">Product Name:</label>
+                    <input type="text" name="" id="name" class="modal-input" required>
+                </div>
+
+                <div class="price-quantity-div">
+
+                    <div class="price-input">
+                        <label for="product-price "class="modal-label" >Price:</label>
+                        <input type="text" id="price" class="modal-input" placeholder="100$" required>
+                    </div>
+
+                    <div class="quantity-input">
+                        <label for="product-quantity"class="modal-label">Quantity</label>
+                        <input type="number" min="0" placeholder="01" id="quantity" class="modal-input" required>
+                    </div>
+                </div>
+                <div class="origin-input">
+                    <label for="product-origin"class="modal-label">Origins</label>
+                    <input type="text" id="origin" class="modal-input" required>
+                </div>
+
+                <div class="img-input">
+                    <label for="img-product"class="modal-label">Choose Product Image:</label>
+                    <input type="file">
+                </div>
+                
+                <div class="btn-div">
+
+                    <button class="clear-info-product-btn" >
+                        <i class="ti-brush"></i>
+                            Clear 
+                        </button>
+
+                    <button onclick="showSuccessToast();" class="add-info-product-btn js-modal-savechange">
+                    <i class="ti-save"></i>
+                        Save Info
+                    </button>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <!--End Modal-Edit -->
+
+    <!--Begin Modal-Delete-->
+    <div class="modal-delete js-modal-delete">
+        <div class="modal-delete-container js-modal-delete-container">
+            <!--Begin Close-button -->
+           
+            <!--End Close-button -->
+                <header class="modal-delete-header">
+                    <p class="head-delete-arlert">Product Confirmation</p>
+                </header>
+                <div class="modal-delete-body">
+                    
+                    <div class="body-alert">
+                        <p>Are you sure you want to delete this product?</p>
+                    </div>
+                    <hr>
+
+                    <div class="btn-option">
+                        <button class="cancel-account js-modal-delete-close">Cancel</button>
+                        <button onclick="showErrorToast();" class="delete-account js-modal-deleted">Delete</button>
+                    </div>
+                    
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        <!--End Modal-Delete -->
+
+        <!-- Java script modal-->
+
+        <script src="./JS/product.js"></script>
+
+        <!-- Toas message -->
+        <script src="./JS/toast.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <div id="toast"></div>
+
+
+        <script>
+        function showSuccessToast() {
+            toast({
+            title: "Successful!",
+            message: "Thao tác thành công.",
+            type: "success",
+            duration: 5000
+            });
+        }
+
+        function showErrorToast() {
+            toast({
+            title: "Deleted!",
+            message: "Bạn vừa xóa một sản phẩm.",
+            type: "error",
+            duration: 5000
+            });
+        }
+        </script>
+</body>
+</html>
